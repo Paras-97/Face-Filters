@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            table {
+                border-collapse: collapse;
+            }
+            th {
+                background-color:green;
+                Color:white;
+            }
+            th, td {
+                width:150px;
+                text-align:center;
+                border:1px solid black;
+                padding:5px
+              
+            }
+            .geeks {
+                border-right:hidden;
+            }
+            .gfg {
+                border-collapse:separate;
+                border-spacing:0 15px;
+            }
+            h1 {
+                color:green;
+            }
+            #container {
+                margin: 0px auto;
+                width: 500px;
+                height: 375px;
+                border: 10px #333 solid;
+            }
+            #imageElement {
+                width: 500px;
+                height: 375px;
+                background-color: #666;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <img src = "{{url_for('video_feed')}}" id = 'imageElement'>
+        </div>
+
+        
+        <div style = "position:relative; left:400px; top:20px;">
+        <form action = "{{url_for('video_feed')}}" method = "POST"  >
+        <table>
+        <tr>
+            <th><button name = 'img' type = 'submit' value = "Dog">Dog</button></th>
+            <th><button name = 'img' type = 'submit' value = "Neon">Neon</button></th>
+            <th><button name = 'img' type = 'submit' value = "Witch">Witch</button></th>
+        </tr>
+        <tr>
+            <td><img src = "{{url_for('static', filename = 'puppy.png') }}" style="width:100px;height:100px;" alt="Dog"></td>
+            <td><img src = "{{url_for('static', filename = 'Neon_mask.png')}}" style="width:100px;height:100px;"></td>
+            <td><img src = "{{url_for('static', filename = 'witch.png')}}" style="width:100px;height:100px;"></td>
+        </tr>
+    </table>
+    </form>
+    </div>
+    </body>
+</html>
