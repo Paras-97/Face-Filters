@@ -8,3 +8,5 @@ Python: 3.9.0 </br>
 Flask: 2.0.1 </br>
 OpenCv: 4.5.1
  
+For better understanding of this work please refer to this link </br>
+https://medium.com/@rajput786.pp/face-filter-web-application-using-flask-d2cd0b772bd7
